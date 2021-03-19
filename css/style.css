@@ -39,7 +39,7 @@ a {
 }
 
 .main-header {  
-  background: url("../images/banner-mobile.jpg") black no-repeat center center;
+  background: url("../images/banner-mobile.jpg") black no-repeat bottom left;
   background-size: cover;
   position: relative;
 
@@ -56,7 +56,7 @@ a {
 @media (min-width: 641px) {
   .main-header {
     padding: 28px 16px 146px;
-    background: url("../images/banner-bg-tablet.jpg") black no-repeat center center;
+    background: url("../images/banner-bg-tablet.jpg") black no-repeat bottom left;
   }
 
   .header-nav {
