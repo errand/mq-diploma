@@ -57,6 +57,7 @@ a {
   .main-header {
     padding: 28px 16px 146px;
     background: url("../images/banner-bg-tablet.jpg") black no-repeat bottom left;
+    background-size: cover;
   }
 
   .header-nav {
@@ -70,6 +71,7 @@ a {
 @media (min-width: 1201px) {
   .main-header {
     background: url("../images/banner-bg.jpg") black no-repeat center center;
+    background-size: cover;
   }
 }
 
@@ -579,6 +581,31 @@ form .input:placeholder {
   font-size: 12px;
   color: #b59f5b;
 }
+
+
+.products__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product__info {
+  outline: #b59f5b 3px;
+}
+
+@media (min-width: 641px) {
+  .product__item {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1201px) {
+  .product__item {
+    max-width: 33.333%;
+  }
+}
+
+
 
 .social {
   display: flex;
