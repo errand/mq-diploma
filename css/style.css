@@ -46,35 +46,6 @@ a {
   z-index: 1;
 }
 
-@media (max-width: 641px) {
-  .main-header {
-    padding: 220px 16px;
-    text-align: center;
-  }
-}
-
-@media (min-width: 641px) {
-  .main-header {
-    padding: 28px 16px 146px;
-    background: url("../images/banner-bg-tablet.jpg") black no-repeat bottom left;
-    background-size: cover;
-  }
-
-  .header-nav {
-    display: flex;
-    justify-content: space-between;
-  
-    margin-bottom: 80px;
-  }
-}
-
-@media (min-width: 1201px) {
-  .main-header {
-    background: url("../images/banner-bg.jpg") black no-repeat center center;
-    background-size: cover;
-  }
-}
-
 .main-header:after {
   display: block;
   content: '';
@@ -158,18 +129,6 @@ a {
   display: none;
 }
 
-@media (min-width: 1024px) {
-  .header-nav__button {
-    display: none;
-  }
-
-  .header-nav .nav-list {
-    display: flex;
-    align-items: center;
-    list-style: none;
-  }
-}
-
 .blog-title .h1{
   max-width: 700px;
 
@@ -179,20 +138,6 @@ a {
     
   margin: 0 auto;
   padding-top: 30px;
-}
-
-@media (min-width: 641px) {
-  .blog-title .h1{
-    
-  padding-top: 0;
-  }
-}
-
-@media (min-width: 1201px) {
-  .blog-title .h1{
-    font-size: 45px;
-    line-height: 75px;
-  }
 }
 
 .trends {
@@ -243,18 +188,6 @@ a {
   z-index: -1;
 }
 
-@media (min-width: 641px) and (max-width: 1200px), (max-width: 640px) and (orientation: landscape) {
-  .trends__item {
-    width: calc(50% - 1px);
-  }  
-}
-
-@media (min-width: 641px) and (orientation: landscape), (min-width: 1201px) {
-  .trends__item {
-    width: calc(25% - 1px);
-  }  
-}
-
 .trends__item:first-child{
   border-left: none;
   background-image: url("../images/trend1.jpg");
@@ -289,18 +222,18 @@ a {
   color: #fff;
 }
 
-.main-content {
+.main-content {    
   display: flex;
-  padding-top: 64px;
+  padding-top: 45px;
 }
 
 .main {
-  margin-right: 120px;
-  margin-bottom: 65px;
+  margin-bottom: 45px;
 }
 
 .news .article {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 60px;
 }
 
@@ -597,8 +530,8 @@ form .input:placeholder {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .product__image .image {
@@ -607,7 +540,7 @@ form .input:placeholder {
 
 .product__info {
   outline: 2px solid #b59f5b;
-  outline-offset: 1.5rem;
+  outline-offset: .5rem;
 }
 
 .product__title {
@@ -615,20 +548,6 @@ form .input:placeholder {
   text-transform: uppercase;
   margin: 0;
 }
-
-@media (min-width: 641px) {
-  .product__item {
-    max-width: 50%;
-  }
-}
-
-@media (min-width: 1201px) {
-  .product__item {
-    max-width: 33.333%;
-  }
-}
-
-
 
 .social {
   display: flex;
@@ -697,4 +616,107 @@ form .input:placeholder {
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute;
+  //overflow: hidden;
 } 
+
+/*
+*******************
+*                 *
+*  Media queries  *
+*                 *
+*******************
+*/
+
+@media (min-width: 641px) and (max-width: 1200px), (max-width: 640px) and (orientation: landscape) {
+  .trends__item {
+    width: calc(50% - 1px);
+  }  
+}
+
+@media (min-width: 641px) and (orientation: landscape), (min-width: 1201px) {
+  .trends__item {
+    width: calc(25% - 1px);
+  }  
+}
+@media (max-width: 641px) {
+  .main-header {
+    padding: 220px 16px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 641px) {
+  .main-header {
+    padding: 28px 16px 146px;
+    background: url("../images/banner-bg-tablet.jpg") black no-repeat bottom left;
+    background-size: cover;
+  }
+
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+  
+    margin-bottom: 80px;
+  }
+
+  .blog-title .h1{    
+    padding-top: 0;
+  }
+
+  .main-content {
+    padding-top: 50px;
+  }
+
+  .main {      
+    margin-right: 35px;
+    margin-bottom: 50px
+  }
+
+  .product__item {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-nav__button {
+    display: none;
+  }
+
+  .header-nav .nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+}
+
+@media (min-width: 1201px) {
+  .main-header {
+    background: url("../images/banner-bg.jpg") black no-repeat center center;
+    background-size: cover;
+  }
+
+  .blog-title .h1{
+    font-size: 45px;
+    line-height: 75px;
+  }
+
+  .container {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .main-content {    
+    display: flex;
+    padding-top: 60px;
+  }
+
+  .main {
+    margin-right: 60px;
+    margin-bottom: 120px
+  }
+
+  .product__item {
+    max-width: 33.333%;
+  }
+}
+
