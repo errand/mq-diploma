@@ -582,6 +582,9 @@ form .input:placeholder {
   color: #b59f5b;
 }
 
+.products .widget-title {
+  margin-bottom: 0;
+}
 
 .products__wrapper {
   display: flex;
@@ -589,8 +592,28 @@ form .input:placeholder {
   justify-content: space-around;
 }
 
+.product__item {
+  padding: 1.5rem 3rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.product__image .image {
+  max-width: 100%;
+}
+
 .product__info {
-  outline: #b59f5b 3px;
+  outline: 2px solid #b59f5b;
+  outline-offset: 1.5rem;
+}
+
+.product__title {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 @media (min-width: 641px) {
