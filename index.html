@@ -398,8 +398,39 @@
     <section class="container copyright">
       <h2 class="widget-title visually-hidden">Copyright</h2>
       <p><a href="#0">Copyright © 2009–2019 City Blog LLC.</a></p>
-    </section>
-    
+    </section>    
   </footer>
+
+  <div class="popup">
+    <div class="popup-container">
+      <div class="feedback widget">
+        <header class="feedback-header">
+          <h3 class="feedback-title widget-title">Ваш фидбэк</h3>
+        </header>
+        <div class="feedback__content">
+          <form class="feedback__form form">
+            <div class="feedback__row">
+              <label class="feedback-label" for="visits">Как часто вы заходите на сайт?</label>
+              <select id="visits" class="feedback__field feedback__field_visits input" required>
+                <option selected value="dayly">Почти каждый день</option>
+                <option value="weekly">Каждую неделю</option>
+                <option value="monthly">Раз в месяц</option>
+              </select>
+            </div>
+            <div class="feedback__row">
+              <label class="feedback-label">Вы подписаны на email рассылку?</label>
+              <label for="yes">Да</label><input id="yes" name="yes" type="radio">
+              <label for="no">Нет</label><input id="no" name="no" type="radio">
+            </div>             
+            <div class="feedback__row">
+              <label class="feedback-label" for="textarea">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
+              <textarea id="textarea" placeholder="Может, больше рецептов?"></textarea>
+            </div>  
+            <button class="button">Отправить</button>
+          </form>
+        </div>
+      </div>
+      <button class="popup__close" type="button">Закрыть окно</button>
+    </div>
 </body>
 </html>
