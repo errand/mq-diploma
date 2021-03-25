@@ -15,6 +15,7 @@
       <a href="#0" class="logo"><img src="./svg/noemi-logo.svg" alt="Logo"></a>
   
       <ul class="nav-list">
+        <li class="list-item"><a href="#0" onclick="openPopup()">Открыть попап</a></li>
         <li class="list-item"><a href="#0">Главная</a></li>
         <li class="list-item"><a href="#0">посты</a></li>
         <li class="list-item"><a href="#0">статьи</a></li>
@@ -401,36 +402,65 @@
     </section>    
   </footer>
 
-  <div class="popup">
+  <div class="popup _hidden">
     <div class="popup-container">
       <div class="feedback widget">
         <header class="feedback-header">
           <h3 class="feedback-title widget-title">Ваш фидбэк</h3>
         </header>
-        <div class="feedback__content">
-          <form class="feedback__form form">
-            <div class="feedback__row">
+        <div class="feedback-content">
+          <form class="feedback-form form">
+            <div class="feedback-row">
               <label class="feedback-label" for="visits">Как часто вы заходите на сайт?</label>
-              <select id="visits" class="feedback__field feedback__field_visits input" required>
-                <option selected value="dayly">Почти каждый день</option>
-                <option value="weekly">Каждую неделю</option>
-                <option value="monthly">Раз в месяц</option>
-              </select>
+              <div class="feedback-select">
+                <select id="visits" class="feedback-field feedback-field_visits input" required>
+                  <option selected value="dayly">Почти каждый день</option>
+                  <option value="weekly">Каждую неделю</option>
+                  <option value="monthly">Раз в месяц</option>
+                </select>
+                <span class="feedback-select_arrows">
+                  <span class="feedback-select_arrows select_arrow_up"></span>
+                  <span class="feedback-select_arrows select_arrow_down"></span>
+                </span>
+              </div>
             </div>
-            <div class="feedback__row">
+            <div class="feedback-row">
               <label class="feedback-label">Вы подписаны на email рассылку?</label>
-              <label for="yes">Да</label><input id="yes" name="yes" type="radio">
-              <label for="no">Нет</label><input id="no" name="no" type="radio">
+              <div>
+                <label class="radio-group">
+                  <input type="radio" class="radio visually-hidden" name="radio-group" required>
+                  <span class="radio-group-text">Да</span>
+                </label>
+                <label class="radio-group">
+                  <input type="radio" class="radio visually-hidden" name="radio-group" required>
+                  <span class="radio-group-text">Нет</span>
+                </label>
+              </div>
             </div>             
-            <div class="feedback__row">
+            <div class="feedback-row">
               <label class="feedback-label" for="textarea">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
-              <textarea id="textarea" placeholder="Может, больше рецептов?"></textarea>
+              <textarea id="textarea" class="feedback-field feedback-field_textarea input" placeholder="Может, больше рецептов?"></textarea>
             </div>  
             <button class="button">Отправить</button>
           </form>
         </div>
       </div>
-      <button class="popup__close" type="button">Закрыть окно</button>
+      <button class="popup-close" type="button" onclick="closePopup()">Закрыть окно</button>
     </div>
+  </div>
+
+<script>
+
+  let popup = document.querySelector('.popup'),
+      main_menu = document.querySelector('.header-nav .nav-list');
+
+  function closePopup() {
+    popup.classList.add('_hidden');
+  }
+
+  function openPopup() {
+      popup.classList.remove('_hidden');
+  }
+</script>
 </body>
 </html>
