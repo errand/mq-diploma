@@ -306,11 +306,6 @@ a {
   font-size: 15px;
 }
 
-.right-sidebar {
-  width: 272px;
-  min-width: 272px;
-}
-
 .sidebar .widget:not(:last-child) {
   padding-bottom: 63px;
 }
@@ -660,8 +655,9 @@ form .input:placeholder {
 .visually-hidden {
   width: 1px;
   height: 1px;
-  clip: rect(1px, 1px, 1px, 1px);
+  clip: rect(0 0 0 0);
   position: absolute;
+  overflow: auto;
 }
 
 ._hidden {
@@ -832,7 +828,7 @@ form .input:placeholder {
   }  
 }
 
-@media (min-width: 641px) and (orientation: landscape), (min-width: 1201px) {
+@media (min-width: 1024px) and (orientation: landscape), (min-width: 1201px) {
   .trends__item {
     width: calc(25% - 1px);
   }  
@@ -905,6 +901,11 @@ form .input:placeholder {
 
   .products__item {
     max-width: 50%;
+  }
+
+  .right-sidebar {
+    width: 272px;
+    min-width: 272px;
   }
 }
 
