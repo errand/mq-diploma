@@ -656,12 +656,7 @@ form .input:placeholder {
   height: 1px;
   clip: rect(0 0 0 0);
   position: absolute;
-<<<<<<< HEAD
   overflow: hidden;
-=======
-  /*overflow: auto;*/
-  visibility: hidden;
->>>>>>> 2e29e8bb943d1d41085c375267765651e00d3daf
 }
 
 ._hidden {
