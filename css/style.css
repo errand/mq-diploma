@@ -657,7 +657,7 @@ form .input:placeholder {
   height: 1px;
   clip: rect(0 0 0 0);
   position: absolute;
-  overflow: auto;
+  overflow: hidden;
 }
 
 ._hidden {
